@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shopping site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="jquerymin.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="mainstyle.css">
+
+<style>
+
+</style>
+
+<script>
+	$(document).ready(function(){
+		function testJS(b) {
+    //var b = 101,
+       url = 'orders.html?year=' + encodeURIComponent(b);
+
+    document.location.href = url;
+    //alert("hello");
+	}
+		$("#allp").click(function(){testJS(000)});
+		$("#firstp").click(function(){testJS(001)});
+		$("#secondp").click(function(){testJS(002)});
+		$("#thirdp").click(function(){testJS(003)});
+
+	})
+</script>
+
+</head>
+<body>
+  <!--img src="projectlogo.jpg" height="100px" width="500px" style="position:absolute"-->
+ 
+  <div id="navvbar">
+  <ul class="nav justify-content-end">
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li> 
+    <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+  </ul>
+</div>
+
+<div class="onimage">
+ <img src="img1.jpg" alt ="abcd" style="height:700px;width:100%;padding-top:2%;">
+ <div class="buynow"><button type="button" class="btn btn-primary" onclick="window.location.href='#gautam'">BUY NOW</button></div>
+
+</div>
+
+
+<div id="gautam">
+<div class="row1" style="padding-left:15%">
+  <div class="column">
+
+<div class="container" style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">All Projects</h4>
+      <p class="card-text">Some example text some example text.<br>DESCRIPTION.</p>
+     <button class="btn btn-primary" id="allp">PROCEED</button>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="column">
+
+  <div class="container" style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">First Year</h4>
+      <p class="card-text">Some example text some example text.<br>DESCRIPTION.</p>
+      <button class="btn btn-primary" id="firstp">PROCEED</button>
+
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+<div class="column">
+
+  <div class="container" style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">Second Year</h4>
+      <p class="card-text">Some example text some example text.<br>DESCRIPTION.</p>
+      <button class="btn btn-primary" id="secondp">PROCEED</button>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+<div class="column">
+
+  <div class="container" style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">Third Year</h4>
+      <p class="card-text">Some example text some example text.<br>DESCRIPTION.</p>
+      <button class="btn btn-primary" id="thirdp">PROCEED</button>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+
+</div>
+<!--
+<div class="row1">
+  <div class="column">
+    <img src="project1.jpg" height=100px width=100px>
+  </div>
+  <div class="column">
+    <img src="project1.jpg" height=100px width=100px>
+  </div>
+
+<div class="column">
+    <img src="project1.jpg" height=100px width=100px>
+  </div> 
+</div>
+-->
+
+</body>
+</html>

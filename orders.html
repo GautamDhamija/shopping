@@ -1,0 +1,180 @@
+<!doctype HTML>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="jquerymin.js"></script>
+  <script src="prices.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="mainstyle.css">
+	<script>
+		var subject;
+		//document.getElementById("hello").innerHTML="Gautam";
+			window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+    subject=data.year;
+   // alert(data.year);
+}
+
+	$(document).ready(function(){
+		if(subject==1)
+		{
+			//alert("working");
+			$(".one").show();
+		}
+		else if(subject==2)
+		{
+			$(".two").show();
+		}
+		else if(subject==3)
+		{
+			$(".three").show();
+		}
+    else
+    {
+      $(".column").show();
+    }
+
+    function testJS(b) {
+    //var b = 101,
+       url = 'conformation.html?projectno=' + encodeURIComponent(b);
+
+    document.location.href = url;
+    //alert("hello");
+  }
+    $("#p1").click(function(){testJS(1)});
+    $("#p2").click(function(){testJS(2)});
+    $("#p3").click(function(){testJS(3)});
+    $("#p4").click(function(){testJS(4)});
+    $("#p5").click(function(){testJS(5)});
+    $("#p6").click(function(){testJS(6)});
+
+    $("#p1").text(pp1());
+    $("#p2").text(pp2());
+    $("#p3").text(pp3());
+    $("#p4").text(pp4());
+    $("#p5").text(pp5());
+    $("#p6").text(pp6());
+
+	})
+	</script>
+</head>
+<body>
+	<div id="navvbar">
+  <ul class="nav justify-content-end">
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li> 
+    <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+  </ul>
+</div>
+
+<div class="row1" style="padding-left:15%">
+
+<div class="column one hide" >
+
+<div class="container" style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">Project 1</h4>
+      <p class="card-text">project 1 is for first year students .<br>PRICE:Rs<span id="p1"></span></p>
+      <button class="btn btn-primary" id="p1">BUY NOW</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="column one hide" >
+
+<div class="container" style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">Project 2</h4>
+      <p class="card-text">project 2 is for first year students .<br>PRICE:Rs<span id="p2"></span></p>
+      <button class="btn btn-primary" id="p2">BUY NOW</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="column two hide" >
+
+<div class="container" style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">Project 3</h4>
+      <p class="card-text">Its for second year<br>PRICE:RS<span id="p3"></span></p>
+      <button class="btn btn-primary" id="p3">BUY NOW</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="column two hide" >
+
+<div class="container" style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">Project 4</h4>
+      <p class="card-text">Its for second year<br>PRICE:RS<span id="p4"></span></p>
+      <button class="btn btn-primary" id="p4">BUY NOW</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="column three hide" >
+
+<div class="container " style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">Project 5</h4>
+      <p class="card-text">Its for third year students<br>PRICE:Rs<span id="p5"></span></p>
+      <button class="btn btn-primary" id="p5">BUY NOW</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="column three hide" >
+
+<div class="container " style="padding-top:50px">
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="project1.jpg" alt="Card image" >
+    <div class="card-body">
+      <h4 class="card-title">Project 6</h4>
+      <p class="card-text">Its for third year students<br>PRICE:Rs<span id="p6"></span></p>
+      <button class="btn btn-primary" id="p6">BUY NOW</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+</div>
+
+</body>
+</html

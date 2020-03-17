@@ -1,0 +1,76 @@
+<!doctype HTML>
+<html>
+<head>
+
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="jquerymin.js"></script>
+  <script src="prices.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="mainstyle.css">
+<script>
+
+	var pno;
+		//document.getElementById("hello").innerHTML="Gautam";
+			window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+    pno=data.projectno;
+   // alert(data.projectno);
+	}
+   
+    $(document).ready(function(){
+    	var price;
+    	$("#pro").text(pno);
+    	if(pno==1)
+    		price=pp1();
+    	else if(pno==2)
+    		price=pp2();
+    	else if(pno==3)
+    		price=pp3();
+    	else if(pno==4)
+    		price=pp4();
+    	else if(pno==5)
+    		price=pp5();
+    	else if(pno==6)
+    		price=pp6();
+    	$("#pp").text(price);
+    })
+</script>
+
+</head>
+<body>
+	<div id="navvbar">
+  <ul class="nav justify-content-end">
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li> 
+    <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+  </ul>
+</div>
+
+
+<div class="container">
+  <div class="media border p-3">
+    <img src="project1.jpg" style="width:60px;">
+    <div class="media-body" >
+      <p>You ordered project number <span id="pro"></span><br>
+      	Price is <span id="pp"></span>
+
+      </p>      
+    </div>
+  </div>
+</div>
+</body>
+</html>
